@@ -43,8 +43,8 @@ export class SignupService {
   }
 }
 
-export class SignupBuilder {
-  static build(workspace: string): SignupService {
+export class SignupFacade {
+  static signupCompany(workspace: string): SignupService {
     return new SignupService(workspace).generateSlug().createCompany().createUser()
   }
 }
